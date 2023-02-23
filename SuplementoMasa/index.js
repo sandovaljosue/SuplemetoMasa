@@ -111,6 +111,8 @@ app.get('/', (req, res) => {
       
      } catch (error) {
         console.error(error);
+        let alert=true;
+        res.render("index",{alert})
       }
       alert=false
       res.render("index",{alert})

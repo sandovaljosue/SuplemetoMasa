@@ -9,6 +9,50 @@
    
     
 }
+.quitar{
+    background-color: red;
+    color: white;
+    border-radius: 100%;
+    width: 25px;
+    height: 25px;
+    border: none;
+    cursor: pointer;
+    float: right;
+}
+.Lalert{
+    color: black;
+    font-size: medium;
+    font-weight: bolder;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+padding: 10px 10px 10px 10px;
+}
+.img-alert{
+    width: 20%;
+    display: block;
+    margin: 0 auto;
+    padding: 10px 10px 10px 10px;
+}
+.alert{
+    text-align: center;
+ align-items: center;
+ align-content: center;
+    height: 30%;
+    /* float: left; */
+    width: 50%;
+    background-color: white;
+    border-radius: 25px;
+    position: fixed;
+    margin: 0 auto;
+    bottom: 0;
+    top: 0;
+    padding: 15px 15px 15px 15px;
+    left: 0;
+    display: block;
+    right: 0;
+    -webkit-box-shadow: 1px 2px 11px 8px rgba(0,0,0,0.19);
+    -moz-box-shadow: 1px 2px 11px 8px rgba(0,0,0,0.19);
+    box-shadow: 1px 2px 11px 8px rgba(0,0,0,0.19);
+}
 .logo{
     display: inline-block;
     width: 50px;

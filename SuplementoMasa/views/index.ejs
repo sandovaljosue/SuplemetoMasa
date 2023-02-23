@@ -9,9 +9,16 @@
     <title>Suplementos SLP</title>
 </head>
 <body>
-    <% if (alert) { %>
-        <script>window.alert("Campo incorrecto")</script>
-      <% } %>
+
+      <div class="alert" id="alert" style="display: none;">
+        
+        <button class="quitar" onclick="quitar()">X</button>
+        <img class="img-alert" src="checked-400x400.png" alt="">
+        <label class="Lalert" for="">
+        
+
+        Datos registrados con exito</label>
+     </div>
     <form class="form" action="/envio" method="POST">
     <div class="title_div"><img class="logo" src="icon_logo.png" alt=""><h1>Suplemento MASA S.A. de C.V.    </h1></div>
     <div class="div-scroll" id="imagen"><img class="img-scroll" src="" alt=""></div>
@@ -65,7 +72,25 @@
        </a>
    </div>  
 </body>
+<% alert=true %>
+<% if (alert) { %>
+      
+  <script>const t=document.getElementById("alert");
+  t.style.display="block"
+  
+  </script>
+<% } %>
+
+      
+ 
+
 <script>
+function quitar(){
+  const x=document.getElementById("alert")
+  x.style.display="none"
+}
+
+
     const imagenes = ["killerlabz-brute-bcaa-450gr.jpg", "bgPreKikikiBote.jpg","insanelabz-psychotic-hellboy-250gr_2.jpg"];
     let index = 0;
   
