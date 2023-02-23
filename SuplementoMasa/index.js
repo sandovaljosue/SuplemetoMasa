@@ -10,7 +10,7 @@ const pool = mysql.createPool({
 
   
         host:'us-east.connect.psdb.cloud',
-        user:'0l12mtq2dau1metigqfgk',
+        user:'0l12mtq2dau1metigqfg',
         password:'pscale_pw_P2RWmjZWw8BEIN8J5bOvS1YjiAMtp9miXPGK6VYWyx7',
         database:'postresleandra',
 	ssl:{
