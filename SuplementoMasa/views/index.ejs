@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <title>Suplementos SLP</title>
+</head>
+<body>
+    <% if (alert) { %>
+        <script>window.alert("Campo incorrecto")</script>
+      <% } %>
+    <form class="form" action="/envio" method="POST">
+    <div class="title_div"><img class="logo" src="icon_logo.png" alt=""><h1>Suplemento MASA S.A. de C.V.    </h1></div>
+    <div class="div-scroll" id="imagen"><img class="img-scroll" src="" alt=""></div>
+    <div class="div-campos"> 
+    <label class="title-registro">Mas información</label>
+    <label class="Labels" for="name">Nombre y apellidos:</label>
+    <input class="inputs" type="text" id="name" name="nombre" placeholder="P. Ej. Juan Robledo" required>
+   
+    <label class="Labels" for="numero">Número de Teléfono:</label>
+    <div class="div-mexico"><img class="img-mexico" src="mexico.png" alt=""></div>
+    <input class="inputsnum" type="tel" id="numero" name="numero" pattern="[0-9]{10}" placeholder="4881203465" required>
+  
+    <label class="Labels" for="correo">Correo electrónico:</label>
+    <input class="inputs" type="email" id="correo" name="correo" placeholder="P. Ej. name@gmail.com" required>
+  
+    
+    <button class="boton" type="submit" >Enviar</button>
+    <label class="Labelscont" for="numero">Registrate y un agente se pondra </label>
+    <label class="Labelscont" for="numero">encontacto al instante.</label>
+    <label class="Labelscont" for="numero"></label>
+    <div class="div-footer-form"> <img src="https://lps.web-bear-company.com/static/resources/react_amz_calc/images/f-p.png?v=5336" alt=""></div>
+   
+</div>
+
+</form>
+<div class="row-text-center" id="most-popular-brands">
+    <h3>Marcas más populares</h3>
+             <a href="https://www.suplementosgym.com.mx/marcas/muscletech/" class="col-xs-4 col-md-2">
+           <img class="img-thumbnail" alt="" src="https://www.suplementosgym.com.mx/media/m-image/2/2/muscletech-logo-1.png">
+       </a>
+            <a href="https://www.suplementosgym.com.mx/marcas/musclefit/" class="col-xs-4 col-md-2">
+           <img class="img-thumbnail" alt="" src="https://www.suplementosgym.com.mx/media/m-image/4/1/musclefit-logo_con-fondo.png">
+       </a>
+            <a href="https://www.suplementosgym.com.mx/marcas/mad-labz/" class="col-xs-4 col-md-2">
+           <img class="img-thumbnail" alt="" src="https://www.suplementosgym.com.mx/media/m-image/d/7/mad-labz-logo-1.png">
+       </a>
+            <a href="https://www.suplementosgym.com.mx/marcas/insane-labz/" class="col-xs-4 col-md-2">
+           <img class="img-thumbnail" alt="" src="https://www.suplementosgym.com.mx/media/m-image/3/7/insane-labz-logo.png">
+       </a>
+            <a href="https://www.suplementosgym.com.mx/marcas/ronnie-coleman/" class="col-xs-4 col-md-2">
+           <img class="img-thumbnail" alt="" src="https://www.suplementosgym.com.mx/media/m-image/0/a/ronnie-coleman-logo1.png">
+       </a>
+            <a href="https://www.suplementosgym.com.mx/marcas/mutant/" class="col-xs-4 col-md-2">
+           <img class="img-thumbnail" alt="" src="https://www.suplementosgym.com.mx/media/m-image/5/c/mutant-logo.png">
+       </a>
+            <a href="https://www.suplementosgym.com.mx/marcas/gat-sport/" class="col-xs-4 col-md-2">
+           <img class="img-thumbnail" alt="" src="https://www.suplementosgym.com.mx/media/m-image/2/0/gat-sport-logo.png">
+       </a>
+            <a href="https://www.suplementosgym.com.mx/marcas/nubreed-nutrition/" class="col-xs-4 col-md-2">
+           <img class="img-thumbnail" alt="" src="https://www.suplementosgym.com.mx/media/m-image/f/b/nubreed-nutrition-logo.png">
+       </a>
+   </div>  
+</body>
+<script>
+    const imagenes = ["killerlabz-brute-bcaa-450gr.jpg", "bgPreKikikiBote.jpg","insanelabz-psychotic-hellboy-250gr_2.jpg"];
+    let index = 0;
+  
+    function cambiarImagen() {
+      document.getElementById("imagen").style.backgroundImage = `url(${imagenes[index]})`;
+      index++;
+      if (index === imagenes.length) {
+        index = 0;
+      }
+    }
+  
+    setInterval(cambiarImagen, 2000);
+  </script>
+<footer><img class="logo_footer" src="favicon.png" alt=""> Suplementos SLP MASA. contactanos +524881791275</footer>
+</html>

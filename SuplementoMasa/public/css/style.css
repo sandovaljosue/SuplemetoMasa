@@ -1,0 +1,242 @@
+.form{
+    background-color: white;
+    border-radius: 5px;
+    width: 60%;
+    height: auto;
+    margin: 0 auto;
+
+
+   
+    
+}
+.logo{
+    display: inline-block;
+    width: 50px;
+    height: 60px;
+    padding: 10px 0px 0px 10px;
+}
+.row-text-center{
+    text-align: center;
+}
+.img-thumbnail{
+    width: 100px;
+    height: 50px;
+}
+.div-footer-form{
+    background-color: gainsboro;
+    width: 100%;
+    padding: 10px 0px 0px 0px;
+}
+.div-mexico{
+    display: flex;
+    float: left;
+    padding: 10px 10px 0px 10px;
+}
+.img-mexico{
+    width: 25px;
+    height: 20px;
+    display: inline-block;
+
+}
+footer{
+    font-size: medium;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+display: block;
+    text-align: center;
+    padding: 10px 10px 10px 10px;
+}
+h1{
+    font-style: normal;
+    color: white;
+    display: inline-block;
+    padding: 15px 15px 15px 15px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+.title_div{
+    width: auto;
+    text-align: left;
+    
+    background-color: #064572;
+    
+}
+.img-scroll{
+width: 100%;
+
+}
+.div-scroll{
+   
+   width: 100%;
+ 
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 400px;
+    margin-top: 10px;
+  
+ 
+}
+.boton{
+    background-color:dodgerblue;
+    width: 150px;
+    
+    border: none;
+    border-radius: 25px;
+    color: white;
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px 10px 10px 10px;
+    margin-top: 15px;
+    
+}
+.boton:hover{
+    background-color: limegreen;
+}
+.Labels{
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+color: grey;
+display: flex;
+width: auto;
+margin-top: 5px;
+margin-left: 5px;
+word-wrap: break-word;
+
+
+}
+.Labelscont{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: orange;
+    width: auto;
+    margin-top: 15px;
+    margin-left: 5px;
+    word-wrap: break-word;
+    display: block;
+    
+    
+    }
+.inputs{
+ border: none;
+border-bottom:1px solid black;   
+width: 90%;
+display: block;
+padding: 5px 5px 5px 5px;
+margin-top: 5px;
+margin-left: 5px;
+background-color: rgb(232, 240, 254), rgba(70, 90, 126, 0.4);
+
+}
+.title-registro{
+    background-color: gainsboro;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    font-style: normal;
+    font-weight: bolder;
+    font-size: 2em;
+display: block;
+width: 100%;
+padding: 0px 0px 10px 0px;
+margin-bottom: 10px;
+
+
+}
+.logo_footer{
+    width: 25px;
+    height:30px;
+
+}
+.inputsnum{
+    border: none;
+   border-bottom:1px solid black;   
+   width: 83%;
+   display: block;
+   padding: 5px 5px 5px 5px;
+   margin-top: 5px;
+   margin-left: 5px;
+   }
+.div-campos{
+    display: block;
+    text-align: center;
+ 
+    width: auto;
+    background-color: transparent;
+    float: none;
+    -webkit-box-shadow: 1px 2px 11px 8px rgba(0,0,0,0.19);
+-moz-box-shadow: 1px 2px 11px 8px rgba(0,0,0,0.19);
+box-shadow: 1px 2px 11px 8px rgba(0,0,0,0.19);
+margin-top: 10px;
+}
+
+@media(min-width:1200px) and (max-width:4000px){
+    .div-campos{
+        
+        
+       width: 300px;
+       float: right;
+       margin-right: 20px;
+       
+      
+        
+    }
+    .form{
+padding: 0px 0px 120px 20px;
+
+    }
+
+    .title_div{
+        margin-left: -20px;
+    }
+    .inputs{
+        width: 90%;
+         }
+         .inputsnum{
+            width: 77%;
+             }
+                 .div-scroll{
+       display: inline-block;
+        width: 45%;
+     
+         background-color: transparent;
+         padding: 25px 25px 25px 25px;
+        
+     
+      
+     }
+      
+
+}
+
+@media(min-width:180px) and (max-width:980px){
+    .div-campos{
+        padding: 0px 0px 0px 0px;
+        
+       width: 100%;
+       float: none;
+       
+       
+      
+        
+    }
+    .form{
+padding: 0px 0px 0px 0px;
+width: 100%;
+
+    }
+    .inputs{
+        width: 90%;
+         }
+         .inputsnum{
+            width: 77%;
+             }
+                 .div-scroll{
+       display: inline-block;
+        width: 100%;
+     
+         background-color: transparent;
+         padding: 5px 5px 5px 5px;
+        
+     
+      
+     }
+      
+
+}
