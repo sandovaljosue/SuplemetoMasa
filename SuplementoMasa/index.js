@@ -63,15 +63,16 @@ const PORT = process.env.PORT || 3000;
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get('/', async (req, res) => {
-  const ipAddress = req.ip;
+  const direccionIP = req.headers['x-forwarded-for'] || req.socket.remoteAddress;
+  console.log(`La dirección IP del cliente es: ${direccionIP}`);
   
   try {
  const d={
-      ip:ipAddress
+      ip:direccionIP
     }
   
     await query('INSERT INTO conexiones set ?',d)
-   console.log('La dirección IP fue registrada: ' + ipAddress);
+   console.log('La dirección IP fue registrada: ' + direccionIP);
     
   } catch (error) {
     console.log('Error obtener Ip');
