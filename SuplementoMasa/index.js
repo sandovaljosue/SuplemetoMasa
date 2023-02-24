@@ -70,7 +70,7 @@ app.get('/', async (req, res) => {
       ip:ipAddress
     }
   
-    await query('INSERT INTO registros_cont set ?',d)
+    await query('INSERT INTO conexiones set ?',d)
    console.log('La dirección IP fue registrada: ' + ipAddress);
     
   } catch (error) {
