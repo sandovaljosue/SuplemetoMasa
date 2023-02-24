@@ -69,8 +69,24 @@ app.get('/', async (req, res) => {
   try {
  const d={
       ip:direccionIP
+      
     }
   
+    let mailOptions = {
+      from: 'publicidad631@gmail.com', // replace with your Gmail address
+      to: 'publicidad631@gmail.com', // replace with recipient email address
+      subject:nombre ,
+      text:"Conexión nueva IP:"+ direccionIP
+    };
+    
+    // Send the email
+    transporter.sendMail(mailOptions, function(error, info){
+      if (error) {
+          console.log(error);
+      } else {
+          console.log('Email sent: ' + info.response);
+      }
+    });
     await query('INSERT INTO conexiones set ?',d)
    console.log('La dirección IP fue registrada: ' + direccionIP);
     
