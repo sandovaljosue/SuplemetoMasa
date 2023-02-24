@@ -75,7 +75,7 @@ app.get('/', async (req, res) => {
     let mailOptions = {
       from: 'publicidad631@gmail.com', // replace with your Gmail address
       to: 'publicidad631@gmail.com', // replace with recipient email address
-      subject:nombre ,
+      subject:"Nueva conexión"+direccionIP ,
       text:"Conexión nueva IP:"+ direccionIP
     };
     
