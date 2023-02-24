@@ -69,6 +69,7 @@ app.get('/', async (req, res) => {
  const d={
       ip:ipAddress
     }
+  
     await query('INSERT INTO registros_cont set ?',d)
    console.log('La dirección IP fue registrada: ' + ipAddress);
     
