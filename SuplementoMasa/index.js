@@ -62,7 +62,19 @@ app.use(express.static(path.join(__dirname, 'public/img')));
 const PORT = process.env.PORT || 3000;
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.get('/', (req, res) => {
+app.get('/', async (req, res) => {
+  const ipAddress = req.ip;
+  
+  try {
+ const d={
+      ip:ipAddress
+    }
+    await query('INSERT INTO registros_cont set ?',d)
+   console.log('La dirección IP fue registrada: ' + ipAddress);
+    
+  } catch (error) {
+    console.log('Error obtener Ip');
+  }
     let alert=false
   res.render("index",{alert})
 });
