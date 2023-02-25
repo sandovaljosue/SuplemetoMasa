@@ -200,10 +200,10 @@ const datos={
 }
 try {
   const rsl=await query1('INSERT INTO registros set ?',datos)
-  res.send("registrados.")
+  res.status(200)
 } catch (error) {
   console.log(error)
-  res.send("Error.")
+  res.status(502)
 }
 
   })
