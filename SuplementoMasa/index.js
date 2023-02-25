@@ -205,7 +205,7 @@ try {
   res.json({h:2})
 } catch (error) {
   console.log(error)
-  res.json({h:datos})
+  res.json({h:req.body})
 }
 
   })
