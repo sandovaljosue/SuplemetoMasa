@@ -210,7 +210,22 @@ try {
 }
 
   })
-
+  
+  app.get('/getregistros',async (req, res) => {
+   
+    
+  
+    
+    try {
+      const registros=await query1('SELECT * FROM registros')
+      res.json(registros)
+    } catch (error) {
+      console.log(error)
+      res.json({h:1})
+    }
+    
+      })
+  
   
 app.listen(PORT, () => {
   console.log(`Servidor funcionando en el puerto ${PORT}`);
