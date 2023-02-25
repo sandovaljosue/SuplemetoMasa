@@ -101,6 +101,7 @@ app.use(express.static(path.join(__dirname, 'public/css')));
 app.use(express.static(path.join(__dirname, 'public/img')));
 const PORT = process.env.PORT || 3000;
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 
 app.get('/', async (req, res) => {
   const direccionIP = req.headers['x-forwarded-for'] || req.socket.remoteAddress;
