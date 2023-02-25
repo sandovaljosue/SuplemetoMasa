@@ -191,6 +191,7 @@ app.get('/', async (req, res) => {
 
   app.post('/registrardatos',async (req, res) => {
 const {nombre,apellidos,telefono,correo}=req.body;
+res.json(req.body)
 console.log(req.body)
 const datos={
   nombre:nombre,
@@ -205,7 +206,7 @@ try {
   res.json({h:2})
 } catch (error) {
   console.log(error)
-  res.json({h:req.body})
+  res.json({h:1})
 }
 
   })
