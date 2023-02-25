@@ -191,6 +191,7 @@ app.get('/', async (req, res) => {
 
   app.post('/registrardatos',async (req, res) => {
 const {nombre,apellido,telefono,correo}=req.body;
+console.log(req.body)
 const datos={
   nombre:nombre,
   apellido:apellido,
