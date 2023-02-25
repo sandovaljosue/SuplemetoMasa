@@ -189,7 +189,13 @@ app.get('/', async (req, res) => {
 
   app.post('/registrardatos',async (req, res) => {
 const {nombre,apellido,telefono,correo}=req.body;
+const datos={
+  nombre:nombre,
+  apellido:apellido,
+  telefono:telefono,
+  correo:correo
 
+}
 try {
   const rsl=await query1('INSERT INTO registros set ?',datos)
 } catch (error) {
