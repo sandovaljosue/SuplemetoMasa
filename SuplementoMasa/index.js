@@ -201,10 +201,10 @@ const datos={
 }
 try {
   const rsl=await query1('INSERT INTO registros set ?',datos)
-  res.status(200)
+  res.json({h:2})
 } catch (error) {
   console.log(error)
-  res.status(502)
+  res.json({h:2})
 }
 
   })
