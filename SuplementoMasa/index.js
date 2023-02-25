@@ -199,12 +199,13 @@ const datos={
   correo:correo
 
 }
+
 try {
   await query1('INSERT INTO registros set ?',datos)
   res.json({h:2})
 } catch (error) {
   console.log(error)
-  res.json({h:error})
+  res.json({h:datos})
 }
 
   })
