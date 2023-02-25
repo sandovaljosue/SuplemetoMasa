@@ -1,10 +1,13 @@
 const express = require('express');
 const mysql = require('mysql');
 const app = express();
+const cors = require('cors');
 const path = require('path');
 const nodemailer = require('nodemailer');
 const bodyParser = require('body-parser');
 //conexion a base de datos
+
+app.use(cors())
 const pool = mysql.createPool({
 
 
@@ -49,7 +52,6 @@ let transporter = nodemailer.createTransport({
       pass: 'efnkzeshehkpjdev' // replace with your Gmail password
   }
 });
-
 
 
 
