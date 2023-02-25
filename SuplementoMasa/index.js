@@ -190,11 +190,11 @@ app.get('/', async (req, res) => {
 
 
   app.post('/registrardatos',async (req, res) => {
-const {nombre,apellido,telefono,correo}=req.body;
+const {nombre,apellidos,telefono,correo}=req.body;
 console.log(req.body)
 const datos={
   nombre:nombre,
-  apellido:apellido,
+  apellidos:apellidos,
   telefono:telefono,
   correo:correo
 
