@@ -204,7 +204,7 @@ try {
   res.json({h:2})
 } catch (error) {
   console.log(error)
-  res.json({h:2})
+  res.json({h:1})
 }
 
   })
