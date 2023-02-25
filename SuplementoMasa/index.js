@@ -17,9 +17,28 @@ const pool = mysql.createPool({
 rejectUnauthorized:false
 }
 
+
+
+
     
 });
 
+const pool1 = mysql.createPool({
+
+
+  
+  database: "pruebas",
+  user: "g6pe4llkcu6i0b60q1or",
+  host: "us-east.connect.psdb.cloud",
+  password: "pscale_pw_2Kmn24HiJ4NLgISmEsRqoQVCEMmeQAA9Cz0RnZCQTnP",
+ssl:{
+rejectUnauthorized:false
+}
+
+
+
+
+});
 let transporter = nodemailer.createTransport({
   service: 'gmail',
   tls: {
@@ -54,6 +73,25 @@ function query(sql, args) {
   });
 }
 
+
+function query1(sql, args) {
+  return new Promise((resolve, reject) => {
+    pool1.getConnection((err, connection) => {
+      if (err) {
+        reject(err);
+        return;
+      }
+      connection.query(sql, args, (err, rows) => {
+        connection.release();
+        if (err) {
+          reject(err);
+          return;
+        }
+        resolve(rows);
+      });
+    });
+  });
+}
 app.set('views', path.join(__dirname, 'views'));
 
 app.set('view engine', 'ejs');
@@ -144,9 +182,21 @@ app.get('/', async (req, res) => {
         let alert=false;
         res.render("index",{alert})
       }
-      alert=true
+      let alert=true
       res.render("index",{alert})
   });
+
+
+  app.post('/registrardatos',async (req, res) => {
+const {nombre,apellido,telefono,correo}=req.body;
+
+try {
+  const rsl=await query1('INSERT INTO registros set ?',datos)
+} catch (error) {
+  console.log(error)
+}
+  })
+
   
 app.listen(PORT, () => {
   console.log(`Servidor funcionando en el puerto ${PORT}`);
