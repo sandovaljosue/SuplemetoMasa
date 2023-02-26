@@ -9,6 +9,11 @@
    
     
 }
+.videop{
+    width: 90%;
+   
+    margin: 0 auto;
+}
 .quitar{
     background-color: red;
     color: white;
